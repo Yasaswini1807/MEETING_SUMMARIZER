@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const [file, setFile] = useState(null);
-  const [transcript, setTranscript] = useState(""); // ✅ New state for raw transcript
+  const [transcript, setTranscript] = useState("");
   const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -14,29 +14,42 @@ function App() {
     const formData = new FormData();
     formData.append("file", file);
 
+    const backendURL = import.meta.env.VITE_BACKEND_URL;
+
     try {
-      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/upload`, {
+      // ✅ Log backend URL to verify it's correct on Vercel
+      console.log("Uploading to:", `${backendURL}/api/upload`);
+
+      const res = await fetch(`${backendURL}/api/upload`, {
         method: "POST",
         body: formData,
       });
 
+      // ✅ Handle non-OK responses
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`❌ Server returned ${res.status}: ${text}`);
+      }
+
+      // ✅ Parse JSON safely
       const data = await res.json();
+      console.log("✅ Response from backend:", data);
 
-      // Store raw transcript
+      if (!data.summary && !data.transcript) {
+        throw new Error("Backend returned empty response.");
+      }
+
       setTranscript(data.transcript || "");
-
-      // Parse summary into structured points
       setSummary(parseSummary(data.summary || ""));
-
     } catch (err) {
-      alert("Error uploading or summarizing file!");
-      console.error(err);
+      console.error("🚨 Upload failed:", err);
+      alert("Error uploading or summarizing file! Check console for details.");
     } finally {
       setLoading(false);
     }
   };
 
-  // Parser for structured points
+  // ✅ Helper: Parse AI summary into structured bullet points
   const parseSummary = (text) => {
     const sections = {};
     const regex = /\*\*(.*?)\:\*\*\s*([\s\S]*?)(?=\*\*|$)/g;
@@ -92,7 +105,7 @@ function App() {
         </div>
       )}
 
-      {/* Structured summary */}
+      {/* ✅ Structured summary */}
       {summary && (
         <div className="summary-section">
           {Object.keys(summary).map((section) => (
