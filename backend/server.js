@@ -14,8 +14,7 @@ const PORT = process.env.PORT || 4000;
 // ✅ Enable CORS for frontend running on Vite (default port 5173)
 app.use(
   cors({
-    origin: "https://meeting-summarizer-iota.vercel.app"
-, // frontend URL
+    origin: "https://meeting-summarizer-iota.vercel.app", // frontend URL
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
