@@ -48,18 +48,6 @@ Unlike traditional NLP-based systems, this project leverages **LLMs, Whisper, an
 
 ## 📁 Project Structure
 
-MEETING_SUMMARIZER/
-│
-├── audio/ # Input meeting audio files
-├── transcripts/ # Generated text transcripts
-├── summaries/ # Final summarized outputs
-├── app.py # Main application logic
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
-
-yaml
-Copy code
-
 ---
 
 ## 🔧 Installation
