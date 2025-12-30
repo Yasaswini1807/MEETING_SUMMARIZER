@@ -48,14 +48,45 @@ Unlike traditional NLP-based systems, this project leverages **LLMs, Whisper, an
 ## 📁 Project Structure
 
 ```
+
 MEETING_SUMMARIZER/
 │
-├── audio/               # Input meeting audio files
-├── transcripts/         # Generated text transcripts
-├── summaries/           # Final summarized outputs
-├── app.py               # Main application logic
-├── requirements.txt     # Python dependencies
-└── README.md            # Project documentation
+├── backend/
+│   ├── node_modules/
+│   ├── routes/
+│   │   └── upload.js        # API route for audio upload
+│   ├── services/
+│   │   ├── asr.js           # Speech-to-text (Whisper / ASR)
+│   │   └── llm.js           # LLM-based summarization logic
+│   ├── uploads/             # Uploaded meeting audio files
+│   ├── .env                 # Backend environment variables
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js            # Backend entry point
+│
+├── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .env                 # Frontend environment variables
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vite.config.js
+│
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
+
+
 ```
 
 
