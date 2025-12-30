@@ -39,15 +39,10 @@ Unlike traditional NLP-based systems, this project leverages **LLMs, Whisper, an
 
 ---
 
-## 🎥 Demo
-
-### ▶️ Project Demo Video
-
-Click the link below to watch the demo:
+## 🎥 Demo Video
 
 [▶️ Watch Demo Video](MEETING_SUMMARIZER_LIVE_DEMO.mp4)
-
-> GitHub may download the video instead of playing it inline depending on file size.
+ GitHub may download the video instead of playing it inline depending on file size.
 
 ---
 
