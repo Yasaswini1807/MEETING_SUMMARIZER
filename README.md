@@ -1,126 +1,140 @@
-🎙️ AI-Powered Meeting Summarizer
-An AI-driven meeting summarization system that converts audio recordings of meetings into clear, concise, and structured summaries using Large Language Models (LLMs) and speech-to-text technology.
 
-This project is designed to help teams quickly extract key discussion points, decisions, and action items from long meetings—saving time and improving productivity.
+# 🎙️ AI-Powered Meeting Summarizer
 
-🚀 Features
-🎧 Audio-to-Text Transcription
+An AI-driven system that converts meeting audio recordings into concise, structured summaries using **Generative AI and Large Language Models (LLMs)**. This project is built to solve real-world productivity problems by automatically transcribing and summarizing long meeting recordings.
 
-Converts meeting audio files into accurate text using Whisper.
+Unlike traditional NLP-based systems, this project leverages **LLMs, Whisper, and Groq API** to generate human-like, context-aware summaries.
 
-🧠 LLM-Based Summarization
+---
 
-Generates human-like summaries using Generative AI (LLMs) instead of traditional NLP.
+## 🚀 Features
 
-📌 Structured Output
+- 🎧 Audio-to-text transcription using **Whisper**
+- 🧠 Meeting summarization using **LLMs (Generative AI)**
+- ⚡ Fast inference powered by **Groq API**
+- 📂 Supports large audio files through intelligent chunking
+- 📝 Produces clear, structured, and concise summaries
+- ❌ No rule-based or traditional NLP techniques
 
-Produces concise summaries with key points and action items.
+---
 
-⚡ Fast Inference
+## 🛠️ Tech Stack
 
-Uses Groq API for high-speed LLM processing.
+- **Python**
+- **OpenAI Whisper** – Speech-to-Text
+- **Groq API** – High-speed LLM inference
+- **Large Language Models (LLMs)**
+- **FFmpeg** – Audio preprocessing
+- **Flask** – Backend / API
 
-📂 Supports Large Audio Files
+---
 
-Handles long meetings by chunking audio intelligently.
+## ⚙️ How It Works
 
-🛠️ Tech Stack
-Python
+1. User uploads a meeting audio file  
+2. Audio is validated and split if it exceeds size limits  
+3. Whisper converts audio into text  
+4. Transcribed text is sent to an LLM via Groq API  
+5. The system generates a concise meeting summary  
 
-OpenAI Whisper – Speech-to-text transcription
+---
 
-Groq API – Fast LLM inference
+## 🎥 Demo
 
-Large Language Models (LLMs) – Context-aware summarization
+### ▶️ Project Demo Video
 
-FFmpeg – Audio processing
+Click the link below to watch the demo:
 
-Flask (if used for API / UI)
+[▶️ Watch Demo Video](MEETING_SUMMARIZER_LIVE_DEMO.mp4)
 
-REST APIs
+> GitHub may download the video instead of playing it inline depending on file size.
 
-🧩 How It Works
-Upload Meeting Audio
+---
 
-Audio Preprocessing
+## 📁 Project Structure
 
-File validation & chunking for large audio sizes
-
-Speech-to-Text
-
-Audio is transcribed using Whisper
-
-LLM-Based Summarization
-
-Transcribed text is sent to an LLM via Groq API
-
-Final Summary Output
-
-Clean, readable meeting summary is generated
-
-📁 Project Structure
-bash
-Copy code
 MEETING_SUMMARIZER/
 │
-├── audio/                 # Input audio files
-├── transcripts/           # Generated transcriptions
-├── summaries/             # Final summarized outputs
-├── app.py                 # Main application logic
-├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
-bash
+├── audio/ # Input meeting audio files
+├── transcripts/ # Generated text transcripts
+├── summaries/ # Final summarized outputs
+├── app.py # Main application logic
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
+
+yaml
 Copy code
+
+---
+
+## 🔧 Installation
+
+### 1️⃣ Clone the Repository
+
 git clone https://github.com/Yasaswini1807/MEETING_SUMMARIZER.git
 cd MEETING_SUMMARIZER
-2️⃣ Create Virtual Environment (Optional but Recommended)
-bash
+
+graphql
 Copy code
+
+### 2️⃣ Create Virtual Environment (Optional but Recommended)
+
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-3️⃣ Install Dependencies
-bash
+source venv/bin/activate
+
+shell
 Copy code
+
+### 3️⃣ Install Dependencies
+
 pip install -r requirements.txt
-4️⃣ Set Environment Variables
-bash
+
+shell
 Copy code
+
+### 4️⃣ Set Environment Variable
+
 export GROQ_API_KEY="your_api_key_here"
+
+scss
+Copy code
+
 (Windows PowerShell)
 
-powershell
-Copy code
 setx GROQ_API_KEY "your_api_key_here"
-▶️ Usage
-bash
+
+yaml
 Copy code
+
+---
+
+## ▶️ Usage
+
 python app.py
-Upload a meeting audio file
 
-Wait for transcription and summarization
+yaml
+Copy code
 
-View the generated summary
+- Upload a meeting audio file  
+- Wait for transcription and summarization  
+- View the generated summary  
 
-📌 Key Highlights
-❌ No traditional NLP techniques
+---
 
-✅ Fully powered by Generative AI & LLMs
+## ⭐ Key Highlights
 
-✅ Handles large audio files
+- Fully powered by **Generative AI & LLMs**
+- Designed for **real-world meeting scenarios**
+- Handles **long-duration audio files**
+- Clean, scalable, and production-ready design
+- Ideal for productivity, enterprise, and AI applications
 
-✅ Real-world productivity use case
+---
 
-✅ Scalable for enterprise meeting workflows
+## 🚧 Future Enhancements
 
-📈 Future Enhancements
-Speaker diarization (who spoke what)
-
-Multi-language support
-
-Web dashboard for uploads and downloads
-
-Action item extraction
-
-Calendar & meeting tool integrations
+- Speaker diarization (who spoke what)
+- Multi-language transcription
+- Web-based dashboard
+- Action item extraction
+- Integration with meeting platforms (Zoom, Google Meet)
