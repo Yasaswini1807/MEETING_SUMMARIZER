@@ -44,20 +44,21 @@ Unlike traditional NLP-based systems, this project leverages **LLMs, Whisper, an
 
 [▶️ Click here to download/watch the demo video](https://github.com/Yasaswini1807/MEETING_SUMMARIZER/blob/main/MEETING_SUMMARIZER_LIVE%20DEMO.mp4)
 
----
 
 ## 📁 Project Structure
 
+```
 MEETING_SUMMARIZER/
 │
-├── audio/ # Input meeting audio files
-├── transcripts/ # Generated text transcripts
-├── summaries/ # Final summarized outputs
-├── app.py # Main application logic
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+├── audio/               # Input meeting audio files
+├── transcripts/         # Generated text transcripts
+├── summaries/           # Final summarized outputs
+├── app.py               # Main application logic
+├── requirements.txt     # Python dependencies
+└── README.md            # Project documentation
+```
 
----
+
 
 ## 🔧 Installation
 
