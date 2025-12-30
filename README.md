@@ -48,6 +48,15 @@ Unlike traditional NLP-based systems, this project leverages **LLMs, Whisper, an
 
 ## 📁 Project Structure
 
+MEETING_SUMMARIZER/
+│
+├── audio/ # Input meeting audio files
+├── transcripts/ # Generated text transcripts
+├── summaries/ # Final summarized outputs
+├── app.py # Main application logic
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
+
 ---
 
 ## 🔧 Installation
@@ -57,46 +66,28 @@ Unlike traditional NLP-based systems, this project leverages **LLMs, Whisper, an
 git clone https://github.com/Yasaswini1807/MEETING_SUMMARIZER.git
 cd MEETING_SUMMARIZER
 
-graphql
-Copy code
-
 ### 2️⃣ Create Virtual Environment (Optional but Recommended)
 
 python -m venv venv
 source venv/bin/activate
 
-shell
-Copy code
-
 ### 3️⃣ Install Dependencies
 
 pip install -r requirements.txt
-
-shell
-Copy code
 
 ### 4️⃣ Set Environment Variable
 
 export GROQ_API_KEY="your_api_key_here"
 
-scss
-Copy code
-
 (Windows PowerShell)
 
 setx GROQ_API_KEY "your_api_key_here"
-
-yaml
-Copy code
 
 ---
 
 ## ▶️ Usage
 
 python app.py
-
-yaml
-Copy code
 
 - Upload a meeting audio file  
 - Wait for transcription and summarization  
@@ -121,3 +112,5 @@ Copy code
 - Web-based dashboard
 - Action item extraction
 - Integration with meeting platforms (Zoom, Google Meet)
+
+---
